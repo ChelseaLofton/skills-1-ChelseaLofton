@@ -320,39 +320,41 @@ def reverse_list(items):
     return reverse_list                 # return our reversed_list
 
 
-def reverse_list_in_place(items):
-    """Reverse the input list `in place`.
-    Reverse the input list given, but do it "in place" --- that is,
-    do not create a new list and return it, but modify the original
-    list.
-    **Do not use** the python function `reversed()` or the method
-    `list.reverse()`.
+# def reverse_list_in_place(items):
+#     """Reverse the input list `in place`.
+#     Reverse the input list given, but do it "in place" --- that is,
+#     do not create a new list and return it, but modify the original
+#     list.
+#     **Do not use** the python function `reversed()` or the method
+#     `list.reverse()`.
     
-    For example::
+#     For example::
     
-        >>> orig = [1, 2, 3]
-        >>> reverse_list_in_place(orig)
-        >>> orig
-        [3, 2, 1]
-        >>> orig = ["cookies", "love", "I"]
-        >>> reverse_list_in_place(orig)
-        >>> orig
-        ['I', 'love', 'cookies']
-    """
+#         >>> orig = [1, 2, 3]
+#         >>> reverse_list_in_place(orig)
+#         >>> orig
+#         [3, 2, 1]
+#         >>> orig = ["cookies", "love", "I"]
+#         >>> reverse_list_in_place(orig)
+#         >>> orig
+#         ['I', 'love', 'cookies']
+#     """
     
-    if not items:
-            return None 
+    # if not items:                                     #if empty return none
+    #         return None 
     
-    for item in items:                            # This problem very much stumped me                                       
+    # for item in items:                                # This problem very much stumped me                                       
         
-        holding_place = items.pop()               #then saving those to to a holding place
-        for item in holding_place:                              
-            i = 0
-            items.append(str(holding_place[i]))            #tried appending items to the end of lis
-            i -= 1
-    return items
+    #     holding_place = items.pop()                   # then saving those to to a holding place
+    #     for item in holding_place:                    # tried to iterate over items in holding place          
+    #         i = 0                                     # set i to zero
+    #         items.append(str(holding_place[i]))       # tried appending items to the end of lis
+    #         i -= 1                                    # tried to alter i to get out of order index
+    # return items                                      # returned FAILURE
 
-    
+    # This problem got away from me it tried
+    # items[:] = items[::-1], but a slice creates a new list
+    # I am sure there is some logical math I just haven't been able to figure out
 
 
 def duplicates(items):
